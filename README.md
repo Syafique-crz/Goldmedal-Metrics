@@ -1,35 +1,31 @@
-# Gold Medal Metrics Challenge Project
+GoldMedal Metrics 🏅
 
-### Overview
-In this project, you will use Spring Data JPA to power an Olympics analytics web app.
+→Overview
 
-### Testing
-You can use cURL to manually test your API endpoints.
+GoldMedal Metrics is a data-driven web application built to analyze and manage historical data related to gold medals won by various countries.
+The project showcases a robust backend architecture using modern technologies to deliver efficient API services and database operations.
 
-Here are some example cURL requests and responses.
+→Features
 
-#### Get countries, sorted by name in ascending order 
+1.Retrieve Country Data
+Retrieve a list of countries with sorting options (e.g., by name, GDP, population).
 
-```shell
-curl --request GET "http://localhost:3001/countries?sort_by=name&ascending=y"                                   
+2.Gold Medal Statistics
+Fetch details for a specific country, including gold medal statistics.
 
-{"countries":[{"name":"Afghanistan","code":"AFG","gdp":594.32,"population":32526562,"medals":0},...]}
-```
+3.Medals List
+List all medals won by a country, sorted by customizable criteria like year, season, or event.
 
-#### Get the details for the United States Olympic team
+→Tech Stack
 
-```shell
-curl --request GET "http://localhost:3001/countries/united%20states"                                            
+Spring Boot: Simplifies backend development with pre-configured setups.
 
-{"name":"United States","gdp":"56115.72","population":"321418820","numberMedals":"2477","numberSummerWins":"2302","percentageTotalSummerWins":"21.957268","yearFirstSummerWin":"1896","numberWinterWins":"175","percentageTotalWinterWins":"9.1098385","yearFirstWinterWin":"1924","numberEventsWonByFemaleAthletes":"747","numberEventsWonByMaleAthletes":"1730"}
+Spring Data JPA: Enables seamless interaction with relational databases using ORM.
 
-```
+Maven: Handles dependency management and project building.
 
-#### Get the list of Gold medal winners for the United States Olympic team, sorted by the athlete's name in descending order
+MySQL: Relational database for storing structured data.
 
-```shell
-curl --request GET "http://localhost:3001/countries/united%20states/medals?sort_by=name&ascending=n"            
+Postman: Used for testing and debugging APIs.
 
-{"medals":[{"year":1968,"city":"Mexico","season":"Summer","name":"ZORN, Zachary","country":"United States","gender":"Men","sport":"Aquatics","discipline":"Swimming","event":"4X100M Freestyle Relay"},...]}
-```
-
+Visual Studio Code: IDE for efficient coding and debugging.
